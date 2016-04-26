@@ -8,27 +8,17 @@ $(document).on('ready', function() {
       var combo = winningCombos[i];
 
       if ($('.x').hasClass(combo[0]) && $('.x').hasClass(combo[1]) && $('.x').hasClass(combo[2])) {
-        alert("We have a winner!")
+        alert("X wins!!")
         return
       } else if ($('.o').hasClass(combo[0]) && $('.o').hasClass(combo[1]) && $('.o').hasClass(combo[2])) {
-        alert("We have a winner!")
+        alert("O wins!!")
         return
+      // } else if (turn === 9) {
+      //   alert("Game Over..")
+      };
+
     };
-
-      if
-
-      // combo will be [1,2,3]
-      // compare each combo to a playerState array or use the DOM => $('.x')
-      // alert("We have a winner!")
-    }
-  }
-
-
-//   If a combo (of Xs or Os) is the same as a winning combo,
-//   then alert("We have a winner!")
-
-
-
+  };
 
   $('td').on('click', function () {
     if (turn % 2 === 0) {
@@ -42,11 +32,6 @@ $(document).on('ready', function() {
     $(this).off('click');
     turn++
   });
+
+
 });
-
-
-
-
-// $.inArray( combo[0], [ $('.x').attr('id').each ] );
-// $.inArray( combo[1], [ $('.x') ] );
-// $.inArray( combo[2], [ $('.x') ] );
